@@ -1,5 +1,53 @@
 [
   {
+    "date": "11 Apr 2026 07:46",
+    "topic": "ISO 20022 payment standard EPC European Payments Council",
+    "items": [
+      {
+        "title": "EPC 2026 Public Consultation on SCT Inst Scheme Rulebook Change Requests",
+        "date": "March 2026",
+        "tag": "Consultation",
+        "summary": "The EPC opened a public consultation on 2026 change requests for the SCT Inst rulebook, including proposals to extend name field character length from 70 to 140 characters and to migrate EPC payment scheme rulebooks to the latest ISO 20022 version. The consultation will inform a September 2026 EPC decision on whether 2029 rulebooks migrate to a newer ISO 20022 version (potentially the 2027 ISO version) via a big-bang changeover.",
+        "url": "https://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2026-03/EPC009-26%20SCT%20Inst%20Scheme%20Rulebook%20-%20Public%20Consultation%20Document%20on%202026%20Change%20Requests.pdf"
+      },
+      {
+        "title": "Important Update About the 2025 EPC Payment Scheme Rulebooks (Version 1.1)",
+        "date": "October 2025",
+        "tag": "Rulebook",
+        "summary": "The EPC released version 1.1 of all five 2025 payment scheme rulebooks, effective 5 October 2025. The key update revises the deadline for phasing out unstructured address formats to 15 November 2026 (originally 22 November 2026), aligning with the November 2026 Swift Standards MX Release.",
+        "url": "https://www.europeanpaymentscouncil.eu/news-insights/news/important-update-about-2025-epc-payment-scheme-rulebooks"
+      },
+      {
+        "title": "SEPA Request-to-Pay Implementation Guidelines Version 4.0",
+        "date": "June 2025",
+        "tag": "Technical",
+        "summary": "The EPC published Implementation Guidelines version 4.0 for the SEPA Request-to-Pay (SRTP) scheme, setting out rules for implementing the relevant ISO 20022 XML message standards. These guidelines took effect on 5 October 2025 at 03:30 CEST.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-request-pay-implementation-guidelines-version-40"
+      },
+      {
+        "title": "EPC Recommendation on ISO 20022 Customer Reporting of SCTs, OCT Inst and SDDs (Version 5.0)",
+        "date": "April 2025",
+        "tag": "Technical",
+        "summary": "Version 5.0 of the EPC customer reporting recommendation was released, providing mapping of EPC payment scheme rulebook requirements to ISO 20022 reporting messages (camt.052, camt.053, camt.054). This version includes coverage for the One-Leg Out Instant Credit Transfer (OCT Inst) scheme and took effect 5 October 2025.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/epc-recommendation-iso-20022-customer-reporting-scts-oct-inst"
+      },
+      {
+        "title": "SEPA Instant Credit Transfer (SCT Inst) Rulebook Version 1.1 - IPR Compliance",
+        "date": "October 2025",
+        "tag": "Regulation",
+        "summary": "The 2025 SCT Inst rulebook version 1.1 is fully compliant with EU Regulation 2024/886 (Instant Payments Regulation), amending the SEPA Regulation. The rulebook is based on the 2019 message version of ISO 20022 and is effective until 21 November 2027. Key changes include mandatory reachability requirements, hybrid address format support, and millisecond timestamps for instant transfers.",
+        "url": "https://www.europeanpaymentscouncil.eu/what-we-do/epc-payment-schemes/sepa-instant-credit-transfer/sepa-instant-credit-transfer-rulebook"
+      },
+      {
+        "title": "2025 SEPA Credit Transfer Inter-PSP Implementation Guidelines Version 1.0",
+        "date": "October 2025",
+        "tag": "Technical",
+        "summary": "The EPC published Implementation Guidelines for SEPA Credit Transfer Inter-PSP ISO 20022 XML message standards, based on the 2019 ISO 20022 standard and version 1.1 of the 2025 SCT rulebook. As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-1"
+      }
+    ]
+  },
+  {
     "date": "11 Apr 2026 07:40",
     "topic": "ISO 20022 payment standard EPC European Payments Council",
     "items": [
