@@ -1,0 +1,50 @@
+[
+  {
+    "date": "11 Apr 2026 07:40",
+    "topic": "ISO 20022 payment standard EPC European Payments Council",
+    "items": [
+      {
+        "title": "2025 EPC Payment Scheme Rulebooks Version 1.1 - Important Update",
+        "date": "October 2025",
+        "tag": "Rulebook",
+        "summary": "The EPC released version 1.1 of all five 2025 payment scheme rulebooks (SCT, SCT Inst, SDD Core, SDD B2B, OCT Inst), effective 5 October 2025. Key change: the deadline for phasing out unstructured address formats in EPC payment messages was revised from 22 November 2026 to 15 November 2026 to align with the SWIFT Standards MX Release.",
+        "url": "https://www.europeanpaymentscouncil.eu/news-insights/news/important-update-about-2025-epc-payment-scheme-rulebooks"
+      },
+      {
+        "title": "SEPA Instant Credit Transfer (SCT Inst) Rulebook 2025 Version 1.1 - IPR Compliance",
+        "date": "October 2025",
+        "tag": "Rulebook",
+        "summary": "Version 1.1 of the 2025 SCT Inst rulebook is fully compliant with EU Regulation 2024/886 (Instant Payments Regulation). The rulebook is currently in effect until 21 November 2027 and includes mandatory reachability requirements aligned with IPR deadlines for EEA-based participants.",
+        "url": "https://www.europeanpaymentscouncil.eu/what-we-do/epc-payment-schemes/sepa-instant-credit-transfer/sepa-instant-credit-transfer-rulebook"
+      },
+      {
+        "title": "SEPA Request-to-Pay Implementation Guidelines Version 4.0",
+        "date": "June 2025",
+        "tag": "Technical",
+        "summary": "The EPC published implementation guidelines for ISO 20022 XML message standards for the SEPA Request-to-Pay (SRTP) scheme rulebook version 4.0, which took effect on 5 October 2025 at 03:30 CEST.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-request-pay-implementation-guidelines-version-40"
+      },
+      {
+        "title": "EPC Recommendation on ISO 20022 Customer Reporting (Version 5.0)",
+        "date": "April 2025",
+        "tag": "Technical",
+        "summary": "Updated version 5.0 provides mapping of EPC payment scheme rulebook requirements to ISO 20022 reporting messages (camt.052, camt.053, camt.054). This version now also covers recommendations for the One-Leg Out Instant Credit Transfer (OCT Inst) scheme, effective 5 October 2025.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/epc-recommendation-iso-20022-customer-reporting-scts-oct-inst"
+      },
+      {
+        "title": "ECB ISO 20022 Message Unfreeze Strategy Status Update",
+        "date": "June 2025",
+        "tag": "Technical",
+        "summary": "The ECB outlined its ISO 20022 message unfreeze strategy: implementing ISO Maintenance Release 2024 in June 2026 and annual real-time maintenance starting November 2026. TIPS core payment messages under EPC governance will remain on ISO MR2019 aligned with international market practice.",
+        "url": "https://www.ecb.europa.eu/paym/groups/shared/docs/8f742-2025-06-26-t2-cg-item-5.2-a-iso-20022-message-unfreeze-strategy-status-update.pdf"
+      },
+      {
+        "title": "November 2026 Deadline: Mandatory Structured Address Formats in EPC Payment Messages",
+        "date": "October 2025",
+        "tag": "Regulation",
+        "summary": "As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages. Only fully structured or hybrid address formats will be accepted, with Town Name and Country as minimum required structured elements.",
+        "url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-1"
+      }
+    ]
+  }
+]
