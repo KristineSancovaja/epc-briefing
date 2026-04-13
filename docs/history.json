@@ -4,6 +4,52 @@
     "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
     "bullets": [
       {
+        "headline": "EPC Opens VOP Rulebook 2.0 Public Consultation",
+        "detail": "The European Payments Council launched a 90-day public consultation (April 1 - June 30, 2026) for change requests to the Verification of Payee scheme rulebook version 2.0, with publication expected by November 2026.",
+        "tag": "Consultation",
+        "importance": "High",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-change-requests-verification-payee-vop-rulebook-version-20"
+      },
+      {
+        "headline": "SWIFT Warns: 65% Still Using Unstructured Addresses",
+        "detail": "SWIFT issued urgent guidance that approximately 65% of payment messages still contain unstructured addresses, with under nine months until the November 2026 deadline when unstructured postal addresses will be rejected.",
+        "tag": "Technical",
+        "importance": "High",
+        "source_label": "SWIFT",
+        "source_url": "https://www.swift.com/news-events/news/iso-20022-milestone-november-2026-unstructured-addresses-be-removed"
+      },
+      {
+        "headline": "November 2026: camt.110 Reception Becomes Mandatory",
+        "detail": "Starting November 14, 2026, all financial institutions must be able to receive ISO 20022 camt.110 Enquiry & Investigation messages through Case Management, with automatic RMA bootstrap to enforce mandatory receipt status.",
+        "tag": "Migration",
+        "importance": "High",
+        "source_label": "SWIFT",
+        "source_url": "https://www.swift.com/standards/iso-20022/removal-unstructured-address"
+      },
+      {
+        "headline": "EPC POI Interoperability Consultation Closes April 10",
+        "detail": "The EPC consultation exploring its role in SCT Inst-based payment solutions at Point of Interaction closes April 10, 2026, with potential for dedicated stakeholder workshops depending on feedback received.",
+        "tag": "Consultation",
+        "importance": "Medium",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-interoperability-payment-solutions-based-sct-inst-scheme-poi"
+      },
+      {
+        "headline": "VOP Rulebook v1.1 Updates Effective September 2026",
+        "detail": "The EPC's VOP scheme rulebook version 1.1, addressing issues identified since the October 2025 launch, along with updated API specifications and Security Framework, will become effective on September 20, 2026.",
+        "tag": "Rulebook",
+        "importance": "Medium",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee"
+      }
+    ]
+  },
+  {
+    "date": "13 Apr 2026",
+    "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
+    "bullets": [
+      {
         "headline": "VOP Rulebook 2.0 Consultation Now Open",
         "detail": "The EPC initiated a public consultation on change requests for VOP scheme rulebook version 2.0, running from 1 April to 30 June 2026, as part of regular scheme change management \u2014 stakeholders should submit feedback on proposed modifications.",
         "tag": "Consultation",

@@ -33,7 +33,10 @@ h1 em{color:#F5C05A;font-style:italic}
 .pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
 .bullet-num{font-family:'DM Serif Display',serif;font-size:20px;opacity:.3}
 .bullet-headline{font-family:'DM Serif Display',serif;font-size:16px;color:#0B1F3A;line-height:1.3;margin-bottom:6px}
-.bullet-detail{font-size:13px;color:#555;line-height:1.6}
+.bullet-detail{font-size:13px;color:#555;line-height:1.6;margin-bottom:10px}
+.bullet-source{display:flex;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid rgba(11,31,58,.07)}
+.source-link{font-size:12px;color:#1B6CA8;text-decoration:none;font-weight:500}
+.source-link:hover{text-decoration:underline}
 .sidebar-card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:1rem}
 .sidebar-title{font-family:'DM Serif Display',serif;font-size:14px;color:#0B1F3A;margin-bottom:.75rem;padding-bottom:8px;border-bottom:1px solid rgba(11,31,58,.08)}
 .hist-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(11,31,58,.06);font-size:12px}
@@ -59,11 +62,11 @@ footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
   <div class="hero-inner">
     <p class="eyebrow">European Payments Council · Weekly Monitor</p>
     <h1>ISO 20022<br><em>Weekly Briefing</em></h1>
-    <p class="week-label">Week of 7 April 2026</p>
-    <div class="summary-box">The EPC launched a critical public consultation on VOP rulebook version 2.0 change requests (1 April - 30 June 2026), while the November 2026 deadline for mandatory structured addresses in ISO 20022 payment messages remains the key migration milestone for PSPs.</div>
+    <p class="week-label">Week of April 6, 2026</p>
+    <div class="summary-box">EPC launches 90-day public consultation on VOP rulebook version 2.0 (April 1-June 30) while SWIFT intensifies industry warnings on the November 2026 unstructured address removal deadline with 65% of payment messages still non-compliant.</div>
     <div class="stats">
       <div><span class="stat-n">5</span><span class="stat-l">developments</span></div>
-      <div><span class="stat-n">5</span><span class="stat-l">weeks tracked</span></div>
+      <div><span class="stat-n">6</span><span class="stat-l">weeks tracked</span></div>
     </div>
   </div>
 </section>
@@ -79,19 +82,33 @@ footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
             </div>
             <span class="bullet-num" style="color:#C0392B">#1</span>
           </div>
-          <div class="bullet-headline">VOP Rulebook 2.0 Consultation Now Open</div>
-          <div class="bullet-detail">The EPC initiated a public consultation on change requests for VOP scheme rulebook version 2.0, running from 1 April to 30 June 2026, as part of regular scheme change management — stakeholders should submit feedback on proposed modifications.</div>
+          <div class="bullet-headline">EPC Opens VOP Rulebook 2.0 Public Consultation</div>
+          <div class="bullet-detail">The European Payments Council launched a 90-day public consultation (April 1 - June 30, 2026) for change requests to the Verification of Payee scheme rulebook version 2.0, with publication expected by November 2026.</div>
+          
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-change-requests-verification-payee-vop-rulebook-version-20" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+          </div>
         </div>
         <div class="bullet-card" style="animation-delay:0.08s">
           <div class="bullet-top">
             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
               <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
-              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
+              <span class="pill" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
             </div>
             <span class="bullet-num" style="color:#C0392B">#2</span>
           </div>
-          <div class="bullet-headline">POI Interoperability Consultation Closing 10 April</div>
-          <div class="bullet-detail">The EPC's public consultation exploring its role in interoperability of SCT Inst-based payment solutions at the Point of Interaction closes on 10 April 2026, potentially shaping future mobile/retail payment standards.</div>
+          <div class="bullet-headline">SWIFT Warns: 65% Still Using Unstructured Addresses</div>
+          <div class="bullet-detail">SWIFT issued urgent guidance that approximately 65% of payment messages still contain unstructured addresses, with under nine months until the November 2026 deadline when unstructured postal addresses will be rejected.</div>
+          
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.swift.com/news-events/news/iso-20022-milestone-november-2026-unstructured-addresses-be-removed" target="_blank" rel="noopener" class="source-link">SWIFT &rarr;</a>
+          </div>
         </div>
         <div class="bullet-card" style="animation-delay:0.16s">
           <div class="bullet-top">
@@ -101,32 +118,53 @@ footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
             </div>
             <span class="bullet-num" style="color:#C0392B">#3</span>
           </div>
-          <div class="bullet-headline">November 2026 Structured Address Deadline Confirmed</div>
-          <div class="bullet-detail">As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages across SCT, SCT Inst, and SDD schemes — PSPs must migrate to hybrid or fully structured ISO 20022 address formats.</div>
+          <div class="bullet-headline">November 2026: camt.110 Reception Becomes Mandatory</div>
+          <div class="bullet-detail">Starting November 14, 2026, all financial institutions must be able to receive ISO 20022 camt.110 Enquiry & Investigation messages through Case Management, with automatic RMA bootstrap to enforce mandatory receipt status.</div>
+          
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.swift.com/standards/iso-20022/removal-unstructured-address" target="_blank" rel="noopener" class="source-link">SWIFT &rarr;</a>
+          </div>
         </div>
         <div class="bullet-card" style="animation-delay:0.24s">
           <div class="bullet-top">
             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
               <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span>
-              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Rulebook</span>
+              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
             </div>
             <span class="bullet-num" style="color:#2D7A4F">#4</span>
           </div>
-          <div class="bullet-headline">VOP Scheme v1.1 Effective September 2026</div>
-          <div class="bullet-detail">The EPC published updates to the VOP scheme rulebook, API specifications, and API Security Framework that will become effective on 20 September 2026, introducing technical refinements to the newly operational scheme.</div>
+          <div class="bullet-headline">EPC POI Interoperability Consultation Closes April 10</div>
+          <div class="bullet-detail">The EPC consultation exploring its role in SCT Inst-based payment solutions at Point of Interaction closes April 10, 2026, with potential for dedicated stakeholder workshops depending on feedback received.</div>
+          
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-interoperability-payment-solutions-based-sct-inst-scheme-poi" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+          </div>
         </div>
         <div class="bullet-card" style="animation-delay:0.32s">
           <div class="bullet-top">
             <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Watch</span>
-              <span class="pill" style="background:#F0EFEB;color:#5A5A54">Regulation</span>
+              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span>
+              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Rulebook</span>
             </div>
-            <span class="bullet-num" style="color:#8B5E14">#5</span>
+            <span class="bullet-num" style="color:#2D7A4F">#5</span>
           </div>
-          <div class="bullet-headline">ECB Comprehensive Payments Strategy Published</div>
-          <div class="bullet-detail">The Eurosystem published its comprehensive payments strategy confirming digital euro pilot preparations and continued focus on strengthening SEPA and European retail payment sovereignty.</div>
+          <div class="bullet-headline">VOP Rulebook v1.1 Updates Effective September 2026</div>
+          <div class="bullet-detail">The EPC's VOP scheme rulebook version 1.1, addressing issues identified since the October 2025 launch, along with updated API specifications and Security Framework, will become effective on September 20, 2026.</div>
+          
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+          </div>
         </div>
-    <p style="font-size:11px;color:#aaa;margin-top:8px;font-style:italic">Sources: europeanpaymentscouncil.eu (EPC homepage, news section, VOP scheme pages, implementation guidelines), ECB payment strategy publication, J.P. Morgan ISO 20022 guidance, Red Compass Labs ISO 20022 analysis. Key dates verified across multiple EPC official documents.</p>
+    <p style="font-size:11px;color:#aaa;margin-top:8px;font-style:italic">Primary sources: EPC news portal and SWIFT news-events. The VOP 2.0 consultation is the key EPC development this week. SWIFT's structured address warning underscores urgency for the November 2026 deadline. URLs verified against EPC and SWIFT official websites.</p>
   </div>
   <aside>
     <div class="sidebar-card">
@@ -138,6 +176,10 @@ footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
     <div class="sidebar-card">
       <div class="sidebar-title">Run history</div>
       
+        <div class="hist-row">
+          <span class="hist-date">13 Apr 2026</span>
+          <span class="hist-n">5 items</span>
+        </div>
         <div class="hist-row">
           <span class="hist-date">13 Apr 2026</span>
           <span class="hist-n">5 items</span>
