@@ -5,6 +5,42 @@
     "bullets": [
       {
         "headline": "VOP Rulebook 2.0 Consultation Now Open Until June",
+        "detail": "The EPC initiated a public consultation on change requests for the Verification of Payee (VOP) scheme rulebook version 2.0, running from 1 April to 30 June 2026, as part of the regular change management process for EPC payment-related schemes.",
+        "tag": "Consultation",
+        "importance": "High"
+      },
+      {
+        "headline": "SCT Inst Rulebook Consultation Open Until June 11",
+        "detail": "The EPC is conducting a public consultation on the 2026 SCT Inst rulebook change requests including proposals to extend name field character length from 70 to 140 characters and migration to the latest ISO 20022 standard; responses due by 11 June 2026.",
+        "tag": "Consultation",
+        "importance": "Medium"
+      },
+      {
+        "headline": "Unstructured Address Deadline Confirmed: 15 November 2026",
+        "detail": "As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages across all SEPA schemes, aligned with the SWIFT MX Release date; PSPs must transition to hybrid or fully structured formats.",
+        "tag": "Migration",
+        "importance": "High"
+      },
+      {
+        "headline": "SCT Inst at POI Consultation Closed 10 April",
+        "detail": "The EPC's public consultation exploring its potential role in facilitating interoperability of instant payment solutions at Point of Interaction closed on 10 April 2026, with findings expected to shape future EPC initiatives.",
+        "tag": "Consultation",
+        "importance": "Medium"
+      },
+      {
+        "headline": "VOP Scheme v1.1 Effective Date: 20 September 2026",
+        "detail": "Version 1.1 of the VOP scheme rulebook, API specifications, and API Security Framework will become effective on 20 September 2026, bringing updates following the successful October 2025 launch of the scheme.",
+        "tag": "Rulebook",
+        "importance": "Watch"
+      }
+    ]
+  },
+  {
+    "date": "13 Apr 2026",
+    "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
+    "bullets": [
+      {
+        "headline": "VOP Rulebook 2.0 Consultation Now Open Until June",
         "detail": "The EPC initiated a public consultation on change requests for its Verification of Payee (VOP) scheme rulebook version 2.0 running from 1 April to 30 June 2026, with version 1.1 taking effect on 20 September 2026.",
         "tag": "Consultation",
         "importance": "High"
