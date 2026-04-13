@@ -1,5 +1,41 @@
 [
   {
+    "date": "13 Apr 2026",
+    "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
+    "bullets": [
+      {
+        "headline": "VOP Rulebook 2.0 Consultation Now Open Until June",
+        "detail": "The EPC initiated a public consultation on change requests for its Verification of Payee (VOP) scheme rulebook version 2.0 running from 1 April to 30 June 2026, with version 1.1 taking effect on 20 September 2026.",
+        "tag": "Consultation",
+        "importance": "High"
+      },
+      {
+        "headline": "November 2026 Structured Address Deadline Confirmed",
+        "detail": "As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages across all SEPA schemes, aligned with the SWIFT Standards MX Release.",
+        "tag": "Migration",
+        "importance": "High"
+      },
+      {
+        "headline": "SCT Inst at POI Consultation Closes 10 April",
+        "detail": "The EPC's public consultation exploring its role in facilitating SEPA Instant Credit Transfer interoperability at Point of Interaction is closing on 10 April 2026.",
+        "tag": "Consultation",
+        "importance": "Medium"
+      },
+      {
+        "headline": "ECB Comprehensive Payments Strategy Published",
+        "detail": "The Eurosystem published its comprehensive payments strategy, confirming digital euro pilot preparations with a potential issuance target of 2029, subject to legislation adoption in 2026.",
+        "tag": "Regulation",
+        "importance": "Watch"
+      },
+      {
+        "headline": "PSD3 Final Agreement Expected Q1-Q2 2026",
+        "detail": "Final political agreement on PSD3 between EU institutions is expected in early 2026, with national transposition and PSP system updates to follow through 2026-2027.",
+        "tag": "Regulation",
+        "importance": "Watch"
+      }
+    ]
+  },
+  {
     "date": "11 Apr 2026 07:46",
     "topic": "ISO 20022 payment standard EPC European Payments Council",
     "items": [

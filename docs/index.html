@@ -3,138 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>EPC ISO 20022 Briefing 11 Apr 2026</title>
+<title>ISO 20022 Weekly Briefing · 13 Apr 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Instrument Sans',sans-serif;background:#F4F2EE;color:#1A1A1A;min-height:100vh}
 header{background:#0B1F3A;border-bottom:2px solid #E8A020;padding:0 2rem}
-.hdr{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
-.badge{background:#E8A020;color:#0B1F3A;font-family:'DM Mono',monospace;font-size:11px;font-weight:500;padding:3px 8px;border-radius:3px}
-.hdr-name{color:#fff;font-size:14px;font-weight:500;margin-left:10px}
-.hdr-date{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.4)}
-.hero{background:#142D52;padding:3rem 2rem 2rem}
-.hero-inner{max-width:1100px;margin:0 auto}
-.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:#F5C05A;text-transform:uppercase;margin-bottom:10px}
-h1{font-family:'DM Serif Display',serif;font-size:clamp(26px,4vw,46px);color:#fff;line-height:1.15;margin-bottom:8px}
+.hdr{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px}
+.badge{background:#E8A020;color:#0B1F3A;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;letter-spacing:.05em}
+.hdr-name{color:#fff;font-size:13px;font-weight:500;margin-left:10px}
+.hdr-date{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.35)}
+.hero{background:#142D52;padding:2.5rem 2rem 2rem}
+.hero-inner{max-width:960px;margin:0 auto}
+.eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:#F5C05A;text-transform:uppercase;margin-bottom:8px}
+h1{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.5vw,40px);color:#fff;line-height:1.2;margin-bottom:6px}
 h1 em{color:#F5C05A;font-style:italic}
-.hero-sub{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:1.5rem;max-width:500px;line-height:1.6}
-.stats{display:flex;gap:2rem}
-.stat-n{font-family:'DM Serif Display',serif;font-size:26px;color:#F5C05A;display:block}
-.stat-l{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.05em}
-.main{max-width:1100px;margin:0 auto;padding:2rem;display:grid;grid-template-columns:1fr 280px;gap:2rem;align-items:start}
-@media(max-width:780px){.main{grid-template-columns:1fr}}
-.feed-hdr{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1rem}
-.feed-title{font-family:'DM Serif Display',serif;font-size:20px;color:#0B1F3A}
-.feed-count{font-family:'DM Mono',monospace;font-size:11px;color:#888}
-.card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:1rem}
-.card-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
-.date{font-family:'DM Mono',monospace;font-size:11px;color:#888}
-.card-title{font-family:'DM Serif Display',serif;font-size:17px;color:#0B1F3A;line-height:1.3;margin-bottom:8px}
-.card-summary{font-size:13px;color:#555;line-height:1.7;margin-bottom:10px}
-.card-link{font-size:12px;color:#1B6CA8;text-decoration:none;font-weight:500}
+.week-label{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
+.summary-box{background:rgba(255,255,255,.07);border-left:3px solid #E8A020;border-radius:0 4px 4px 0;padding:12px 16px;font-size:14px;color:rgba(255,255,255,.85);line-height:1.6;max-width:640px}
+.stats{display:flex;gap:2rem;margin-top:1.5rem}
+.stat-n{font-family:'DM Serif Display',serif;font-size:24px;color:#F5C05A;display:block}
+.stat-l{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.05em}
+.main{max-width:960px;margin:0 auto;padding:2rem;display:grid;grid-template-columns:1fr 240px;gap:2rem;align-items:start}
+@media(max-width:700px){.main{grid-template-columns:1fr}}
+.section-title{font-family:'DM Serif Display',serif;font-size:18px;color:#0B1F3A;margin-bottom:1rem}
+.bullet-card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:.75rem;animation:fadeUp .35s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.bullet-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
+.bullet-num{font-family:'DM Serif Display',serif;font-size:20px;opacity:.3}
+.bullet-headline{font-family:'DM Serif Display',serif;font-size:16px;color:#0B1F3A;line-height:1.3;margin-bottom:6px}
+.bullet-detail{font-size:13px;color:#555;line-height:1.6}
 .sidebar-card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:1rem}
-.sidebar-title{font-family:'DM Serif Display',serif;font-size:15px;color:#0B1F3A;margin-bottom:.75rem;padding-bottom:8px;border-bottom:1px solid rgba(11,31,58,.08)}
-.hist-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(11,31,58,.06);font-size:12px}
+.sidebar-title{font-family:'DM Serif Display',serif;font-size:14px;color:#0B1F3A;margin-bottom:.75rem;padding-bottom:8px;border-bottom:1px solid rgba(11,31,58,.08)}
+.hist-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(11,31,58,.06);font-size:12px}
 .hist-row:last-child{border-bottom:none}
 .hist-date{font-family:'DM Mono',monospace;color:#555}
 .hist-n{font-family:'DM Mono',monospace;color:#aaa}
-.note-box{font-size:12px;color:#888;line-height:1.6;font-style:italic;background:#F4F2EE;border-radius:4px;padding:10px;margin-top:8px}
-.muted{font-size:13px;color:#aaa;padding:4px 0}
-footer{background:#0B1F3A;padding:1.25rem 2rem;margin-top:4rem}
-.ftr{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-.ftr-l{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.25)}
-.ftr-r{font-size:11px;color:rgba(255,255,255,.2)}
+.legend-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px;color:#555}
+footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
+.ftr{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.ftr-l{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.2)}
+.ftr-r{font-size:10px;color:rgba(255,255,255,.2)}
 .ftr-r span{color:#E8A020}
 </style>
 </head>
 <body>
 <header>
   <div class="hdr">
-    <div><span class="badge">ISO 20022</span><span class="hdr-name">EPC Intelligence Briefing</span></div>
-    <span class="hdr-date">Saturday, 11 April 2026</span>
+    <div><span class="badge">ISO 20022</span><span class="hdr-name">EPC Weekly Intelligence</span></div>
+    <span class="hdr-date">Monday, 13 April 2026</span>
   </div>
 </header>
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">European Payments Council - Daily Monitor</p>
-    <h1>Payment Standards<br><em>Intelligence Feed</em></h1>
-    <p class="hero-sub">AI-powered daily digest of EPC publications, rulebooks, and consultations on ISO 20022.</p>
+    <p class="eyebrow">European Payments Council · Weekly Monitor</p>
+    <h1>ISO 20022<br><em>Weekly Briefing</em></h1>
+    <p class="week-label">Week of 7 April 2026</p>
+    <div class="summary-box">EPC launched a public consultation on VOP rulebook version 2.0 change requests (1 April – 30 June 2026), while the November 2026 structured address deadline remains the key ISO 20022 compliance milestone for PSPs.</div>
     <div class="stats">
-      <div><span class="stat-n">6</span><span class="stat-l">items today</span></div>
-      <div><span class="stat-n">2</span><span class="stat-l">total runs</span></div>
-      <div><span class="stat-n">11 Apr</span><span class="stat-l">generated</span></div>
+      <div><span class="stat-n">5</span><span class="stat-l">developments</span></div>
+      <div><span class="stat-n">3</span><span class="stat-l">weeks tracked</span></div>
     </div>
   </div>
 </section>
 <div class="main">
   <div>
-    <div class="feed-hdr">
-      <h2 class="feed-title">Latest updates</h2>
-      <span class="feed-count">6 items</span>
-    </div>
+    <div class="section-title">Key developments this week</div>
     
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
-            <span class="date">March 2026</span>
+        <div class="bullet-card" style="animation-delay:0.00s">
+          <div class="bullet-top">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
+              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
+            </div>
+            <span class="bullet-num" style="color:#C0392B">#1</span>
           </div>
-          <h2 class="card-title">EPC 2026 Public Consultation on SCT Inst Scheme Rulebook Change Requests</h2>
-          <p class="card-summary">The EPC opened a public consultation on 2026 change requests for the SCT Inst rulebook, including proposals to extend name field character length from 70 to 140 characters and to migrate EPC payment scheme rulebooks to the latest ISO 20022 version. The consultation will inform a September 2026 EPC decision on whether 2029 rulebooks migrate to a newer ISO 20022 version (potentially the 2027 ISO version) via a big-bang changeover.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/sites/default/files/kb/file/2026-03/EPC009-26%20SCT%20Inst%20Scheme%20Rulebook%20-%20Public%20Consultation%20Document%20on%202026%20Change%20Requests.pdf" target="_blank">Read on EPC &#8594;</a>
-        </article>
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#EBF7F0;color:#2D7A4F">Rulebook</span>
-            <span class="date">October 2025</span>
+          <div class="bullet-headline">VOP Rulebook 2.0 Consultation Now Open Until June</div>
+          <div class="bullet-detail">The EPC initiated a public consultation on change requests for its Verification of Payee (VOP) scheme rulebook version 2.0 running from 1 April to 30 June 2026, with version 1.1 taking effect on 20 September 2026.</div>
+        </div>
+        <div class="bullet-card" style="animation-delay:0.08s">
+          <div class="bullet-top">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
+              <span class="pill" style="background:#EBF4FB;color:#1B6CA8">Migration</span>
+            </div>
+            <span class="bullet-num" style="color:#C0392B">#2</span>
           </div>
-          <h2 class="card-title">Important Update About the 2025 EPC Payment Scheme Rulebooks (Version 1.1)</h2>
-          <p class="card-summary">The EPC released version 1.1 of all five 2025 payment scheme rulebooks, effective 5 October 2025. The key update revises the deadline for phasing out unstructured address formats to 15 November 2026 (originally 22 November 2026), aligning with the November 2026 Swift Standards MX Release.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/news-insights/news/important-update-about-2025-epc-payment-scheme-rulebooks" target="_blank">Read on EPC &#8594;</a>
-        </article>
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
-            <span class="date">June 2025</span>
+          <div class="bullet-headline">November 2026 Structured Address Deadline Confirmed</div>
+          <div class="bullet-detail">As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages across all SEPA schemes, aligned with the SWIFT Standards MX Release.</div>
+        </div>
+        <div class="bullet-card" style="animation-delay:0.16s">
+          <div class="bullet-top">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span>
+              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
+            </div>
+            <span class="bullet-num" style="color:#2D7A4F">#3</span>
           </div>
-          <h2 class="card-title">SEPA Request-to-Pay Implementation Guidelines Version 4.0</h2>
-          <p class="card-summary">The EPC published Implementation Guidelines version 4.0 for the SEPA Request-to-Pay (SRTP) scheme, setting out rules for implementing the relevant ISO 20022 XML message standards. These guidelines took effect on 5 October 2025 at 03:30 CEST.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-request-pay-implementation-guidelines-version-40" target="_blank">Read on EPC &#8594;</a>
-        </article>
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
-            <span class="date">April 2025</span>
+          <div class="bullet-headline">SCT Inst at POI Consultation Closes 10 April</div>
+          <div class="bullet-detail">The EPC's public consultation exploring its role in facilitating SEPA Instant Credit Transfer interoperability at Point of Interaction is closing on 10 April 2026.</div>
+        </div>
+        <div class="bullet-card" style="animation-delay:0.24s">
+          <div class="bullet-top">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Watch</span>
+              <span class="pill" style="background:#F0EFEB;color:#5A5A54">Regulation</span>
+            </div>
+            <span class="bullet-num" style="color:#8B5E14">#4</span>
           </div>
-          <h2 class="card-title">EPC Recommendation on ISO 20022 Customer Reporting of SCTs, OCT Inst and SDDs (Version 5.0)</h2>
-          <p class="card-summary">Version 5.0 of the EPC customer reporting recommendation was released, providing mapping of EPC payment scheme rulebook requirements to ISO 20022 reporting messages (camt.052, camt.053, camt.054). This version includes coverage for the One-Leg Out Instant Credit Transfer (OCT Inst) scheme and took effect 5 October 2025.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/epc-recommendation-iso-20022-customer-reporting-scts-oct-inst" target="_blank">Read on EPC &#8594;</a>
-        </article>
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#EBF4FB;color:#1B6CA8">Regulation</span>
-            <span class="date">October 2025</span>
+          <div class="bullet-headline">ECB Comprehensive Payments Strategy Published</div>
+          <div class="bullet-detail">The Eurosystem published its comprehensive payments strategy, confirming digital euro pilot preparations with a potential issuance target of 2029, subject to legislation adoption in 2026.</div>
+        </div>
+        <div class="bullet-card" style="animation-delay:0.32s">
+          <div class="bullet-top">
+            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Watch</span>
+              <span class="pill" style="background:#F0EFEB;color:#5A5A54">Regulation</span>
+            </div>
+            <span class="bullet-num" style="color:#8B5E14">#5</span>
           </div>
-          <h2 class="card-title">SEPA Instant Credit Transfer (SCT Inst) Rulebook Version 1.1 - IPR Compliance</h2>
-          <p class="card-summary">The 2025 SCT Inst rulebook version 1.1 is fully compliant with EU Regulation 2024/886 (Instant Payments Regulation), amending the SEPA Regulation. The rulebook is based on the 2019 message version of ISO 20022 and is effective until 21 November 2027. Key changes include mandatory reachability requirements, hybrid address format support, and millisecond timestamps for instant transfers.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/what-we-do/epc-payment-schemes/sepa-instant-credit-transfer/sepa-instant-credit-transfer-rulebook" target="_blank">Read on EPC &#8594;</a>
-        </article>
-        <article class="card">
-          <div class="card-meta">
-            <span class="tag" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
-            <span class="date">October 2025</span>
-          </div>
-          <h2 class="card-title">2025 SEPA Credit Transfer Inter-PSP Implementation Guidelines Version 1.0</h2>
-          <p class="card-summary">The EPC published Implementation Guidelines for SEPA Credit Transfer Inter-PSP ISO 20022 XML message standards, based on the 2019 ISO 20022 standard and version 1.1 of the 2025 SCT rulebook. As of 15 November 2026, unstructured address formats will no longer be permitted in EPC payment messages.</p>
-          <a class="card-link" href="https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-1" target="_blank">Read on EPC &#8594;</a>
-        </article>
+          <div class="bullet-headline">PSD3 Final Agreement Expected Q1-Q2 2026</div>
+          <div class="bullet-detail">Final political agreement on PSD3 between EU institutions is expected in early 2026, with national transposition and PSP system updates to follow through 2026-2027.</div>
+        </div>
+    <p style="font-size:11px;color:#aaa;margin-top:8px;font-style:italic">Sources: europeanpaymentscouncil.eu (EPC homepage, news section, rulebook pages, VOP scheme page), ECB comprehensive payments strategy publication, industry sources (Brite, Red Compass Labs, Banking.Vision). Search conducted 13 April 2026.</p>
   </div>
   <aside>
     <div class="sidebar-card">
+      <div class="sidebar-title">Priority legend</div>
+      <div class="legend-row"><span class="pill" style="background:#FDECEA;color:#C0392B">High</span> Act now / imminent</div>
+      <div class="legend-row"><span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span> New publication</div>
+      <div class="legend-row"><span class="pill" style="background:#FEF5E7;color:#8B5E14">Watch</span> Upcoming item</div>
+    </div>
+    <div class="sidebar-card">
       <div class="sidebar-title">Run history</div>
       
+        <div class="hist-row">
+          <span class="hist-date">13 Apr 2026</span>
+          <span class="hist-n">5 items</span>
+        </div>
         <div class="hist-row">
           <span class="hist-date">11 Apr 2026 07:46</span>
           <span class="hist-n">6 items</span>
@@ -144,16 +151,15 @@ footer{background:#0B1F3A;padding:1.25rem 2rem;margin-top:4rem}
           <span class="hist-n">6 items</span>
         </div>
     </div>
-    <div class='sidebar-card'><div class='sidebar-title'>Agent note</div><div class="note-box">Sources are primarily from europeanpaymentscouncil.eu (official EPC website) with supporting analysis from industry sources. All 2025 rulebooks use the 2019 ISO 20022 message version. Key upcoming deadline: unstructured addresses prohibited as of 15 November 2026. The EPC is consulting on a potential ISO 20022 version migration for 2029 rulebooks.</div></div>
     <div class="sidebar-card">
       <div class="sidebar-title">About</div>
-      <p style="font-size:13px;color:#666;line-height:1.6">Automated by Claude AI with live web search. Monitors <strong>europeanpaymentscouncil.eu</strong> for ISO 20022 updates. Runs weekdays at 07:00 UTC via GitHub Actions.</p>
+      <p style="font-size:12px;color:#666;line-height:1.6">Claude AI agent with live web search. Monitors ISO 20022 developments across EPC, SWIFT, ECB and national central banks. Runs every Monday at 10:00 CET.</p>
     </div>
   </aside>
 </div>
 <footer>
   <div class="ftr">
-    <span class="ftr-l">EPC ISO 20022 Daily Intelligence Briefing</span>
+    <span class="ftr-l">ISO 20022 Weekly Intelligence · EPC Monitor</span>
     <span class="ftr-r">Powered by <span>Claude AI</span></span>
   </div>
 </footer>
