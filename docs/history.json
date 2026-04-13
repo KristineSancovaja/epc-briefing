@@ -4,6 +4,52 @@
     "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
     "bullets": [
       {
+        "headline": "EPC Opens VOP Rulebook 2.0 Consultation Through June",
+        "detail": "The EPC initiated a 90-day public consultation on change requests for the Verification of Payee scheme rulebook version 2.0, running from 1 April to 30 June 2026, with the new rulebook expected by November 2026.",
+        "tag": "Consultation",
+        "importance": "High",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee"
+      },
+      {
+        "headline": "EPC Consults on SCT Inst at Point of Interaction",
+        "detail": "The EPC launched a consultation running 6 March to 10 April 2026 exploring its potential role in facilitating interoperability of SCT Inst-based payment solutions at the Point of Interaction (POI).",
+        "tag": "Consultation",
+        "importance": "High",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-use-sct-inst-poi"
+      },
+      {
+        "headline": "EPC Releases 2026 Cryptography Guidelines with PQC Focus",
+        "detail": "The EPC published version 16 of its Guidelines on cryptographic algorithms usage and key management on 17 March 2026, with significant updates on Post-Quantum Cryptography considerations for payment service providers.",
+        "tag": "Technical",
+        "importance": "Medium",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/yearly-update-guidelines-cryptographic-algorithms-usage-and-0"
+      },
+      {
+        "headline": "Bank of England Finalizing November 2026 CHAPS ISO Changes",
+        "detail": "The Bank of England published detailed change request documentation for the November 2026 CHAPS/RTGS ISO 20022 release, with final schemas expected in April 2026; unstructured addresses will be rejected from November 2026.",
+        "tag": "Migration",
+        "importance": "High",
+        "source_label": "Bank of England",
+        "source_url": "https://www.bankofengland.co.uk/payment-and-settlement/rtgs-renewal-programme/iso-20022"
+      },
+      {
+        "headline": "ECB T2 ISO 20022 Unfreeze Step 1 Set for June 2026",
+        "detail": "The ECB is progressing with its ISO 20022 message unfreeze strategy, implementing the initial step with ISO Maintenance Release 2024 in June 2026, with annual real-time maintenance to begin from November 2026.",
+        "tag": "Migration",
+        "importance": "Medium",
+        "source_label": "ECB",
+        "source_url": "https://www.ecb.europa.eu/paym/groups/shared/docs/8f742-2025-06-26-t2-cg-item-5.2-a-iso-20022-message-unfreeze-strategy-status-update.pdf"
+      }
+    ]
+  },
+  {
+    "date": "13 Apr 2026",
+    "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
+    "bullets": [
+      {
         "headline": "EPC Opens VOP Rulebook 2.0 Public Consultation",
         "detail": "The European Payments Council launched a 90-day public consultation (April 1 - June 30, 2026) for change requests to the Verification of Payee scheme rulebook version 2.0, with publication expected by November 2026.",
         "tag": "Consultation",
