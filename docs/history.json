@@ -4,6 +4,52 @@
     "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
     "bullets": [
       {
+        "headline": "EPC Opens VOP Rulebook 2.0 Consultation",
+        "detail": "The EPC initiated a public consultation on change requests for the Verification of Payee scheme rulebook version 2.0 running from 1 April to 30 June 2026, with version 2.0 expected by November 2026.",
+        "tag": "Consultation",
+        "importance": "High",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee"
+      },
+      {
+        "headline": "ECB Publishes Comprehensive Eurosystem Payments Strategy",
+        "detail": "The Eurosystem published a comprehensive payments strategy on 31 March 2026 covering wholesale, B2B, retail, and cross-border payments, with focus on digital euro readiness by 2029 and DLT-based settlement through Pontes and Appia initiatives.",
+        "tag": "Regulation",
+        "importance": "High",
+        "source_label": "ECB",
+        "source_url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260331~04561d8476.en.html"
+      },
+      {
+        "headline": "EPC Consults on SCT Inst at Point of Interaction",
+        "detail": "The EPC is running a public consultation from 6 March to 10 April 2026 exploring its role in interoperability of payment solutions based on SCT Inst at the Point of Interaction.",
+        "tag": "Consultation",
+        "importance": "Medium",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-use-sct-inst-poi"
+      },
+      {
+        "headline": "November 2026 Deadline for Structured Address Format",
+        "detail": "As of 15 November 2026, unstructured postal addresses can no longer be provided in EPC payment messages across all SEPA schemes, aligned with the SWIFT Standards MX Release date.",
+        "tag": "Migration",
+        "importance": "High",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-1"
+      },
+      {
+        "headline": "EPC Publishes Stablecoins Insight Article",
+        "detail": "The EPC published an insight article on 26 March 2026 examining stablecoins as they move from crypto margins to mainstream global finance, highlighting Europe's pivotal regulatory moment under MiCA.",
+        "tag": "Technical",
+        "importance": "Watch",
+        "source_label": "EPC",
+        "source_url": "https://www.europeanpaymentscouncil.eu/news-insights/news"
+      }
+    ]
+  },
+  {
+    "date": "13 Apr 2026",
+    "topic": "ISO 20022 \u2014 Weekly Intelligence Briefing",
+    "bullets": [
+      {
         "headline": "EPC Opens VOP Rulebook 2.0 Consultation Through June",
         "detail": "The EPC initiated a 90-day public consultation on change requests for the Verification of Payee scheme rulebook version 2.0, running from 1 April to 30 June 2026, with the new rulebook expected by November 2026.",
         "tag": "Consultation",

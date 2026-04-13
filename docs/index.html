@@ -3,213 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ISO 20022 Weekly Briefing · 13 Apr 2026</title>
+<title>Zalaris · ISO 20022 Weekly Briefing · 13 Apr 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
+:root{
+  --z-deep-navy:#17245F;
+  --z-navy:#1B3D82;
+  --z-primary-blue:#004F9E;
+  --z-sky-blue:#18B2E8;
+  --z-orange:#E9580C;
+  --z-gold:#EEA900;
+  --z-light-gray:#E0E6ED;
+  --z-body-text:#333333;
+  --z-off-white:#F5F7FA;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Instrument Sans',sans-serif;background:#F4F2EE;color:#1A1A1A;min-height:100vh}
-header{background:#0B1F3A;border-bottom:2px solid #E8A020;padding:0 2rem}
-.hdr{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px}
-.badge{background:#E8A020;color:#0B1F3A;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;padding:3px 8px;border-radius:3px;letter-spacing:.05em}
-.hdr-name{color:#fff;font-size:13px;font-weight:500;margin-left:10px}
-.hdr-date{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.35)}
-.hero{background:#142D52;padding:2.5rem 2rem 2rem}
-.hero-inner{max-width:960px;margin:0 auto}
-.eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:#F5C05A;text-transform:uppercase;margin-bottom:8px}
-h1{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.5vw,40px);color:#fff;line-height:1.2;margin-bottom:6px}
-h1 em{color:#F5C05A;font-style:italic}
-.week-label{font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.4);margin-bottom:1.25rem}
-.summary-box{background:rgba(255,255,255,.07);border-left:3px solid #E8A020;border-radius:0 4px 4px 0;padding:12px 16px;font-size:14px;color:rgba(255,255,255,.85);line-height:1.6;max-width:640px}
-.stats{display:flex;gap:2rem;margin-top:1.5rem}
-.stat-n{font-family:'DM Serif Display',serif;font-size:24px;color:#F5C05A;display:block}
-.stat-l{font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.05em}
-.main{max-width:960px;margin:0 auto;padding:2rem;display:grid;grid-template-columns:1fr 240px;gap:2rem;align-items:start}
-@media(max-width:700px){.main{grid-template-columns:1fr}}
-.section-title{font-family:'DM Serif Display',serif;font-size:18px;color:#0B1F3A;margin-bottom:1rem}
-.bullet-card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:.75rem;animation:fadeUp .35s ease both}
-@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.bullet-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.pill{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
-.bullet-num{font-family:'DM Serif Display',serif;font-size:20px;opacity:.3}
-.bullet-headline{font-family:'DM Serif Display',serif;font-size:16px;color:#0B1F3A;line-height:1.3;margin-bottom:6px}
-.bullet-detail{font-size:13px;color:#555;line-height:1.6;margin-bottom:10px}
-.bullet-source{display:flex;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid rgba(11,31,58,.07)}
-.source-link{font-size:12px;color:#1B6CA8;text-decoration:none;font-weight:500}
-.source-link:hover{text-decoration:underline}
-.sidebar-card{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:1rem}
-.sidebar-title{font-family:'DM Serif Display',serif;font-size:14px;color:#0B1F3A;margin-bottom:.75rem;padding-bottom:8px;border-bottom:1px solid rgba(11,31,58,.08)}
-.hist-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(11,31,58,.06);font-size:12px}
+body{font-family:'Open Sans',sans-serif;background:var(--z-off-white);color:var(--z-body-text);min-height:100vh}
+/* ── Header ── */
+.site-header{background:var(--z-deep-navy);padding:0 2rem}
+.accent-bar{height:4px;background:linear-gradient(90deg,var(--z-primary-blue),var(--z-sky-blue))}
+.hdr{max-width:1040px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:32px;height:32px;background:var(--z-sky-blue);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:18px;height:18px}
+.logo-name{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:.01em}
+.logo-name span{color:var(--z-sky-blue)}
+.hdr-date{font-size:11px;color:rgba(255,255,255,.4);font-family:'Open Sans',sans-serif}
+/* ── Hero ── */
+.hero{background:var(--z-deep-navy);padding:3rem 2rem 2.5rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;background:var(--z-navy);opacity:.4}
+.hero-inner{max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;color:var(--z-sky-blue);text-transform:uppercase;margin-bottom:10px}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:800;color:#fff;line-height:1.15;margin-bottom:6px}
+.hero h1 span{color:var(--z-sky-blue)}
+.week-label{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:1.5rem;font-family:'Open Sans',sans-serif}
+.summary-box{background:rgba(255,255,255,.07);border-left:3px solid var(--z-orange);padding:14px 18px;font-size:14px;color:rgba(255,255,255,.85);line-height:1.65;max-width:620px;border-radius:0 4px 4px 0}
+.stats{display:flex;gap:2.5rem;margin-top:1.75rem;flex-wrap:wrap}
+.stat-n{font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:var(--z-sky-blue);display:block;line-height:1}
+.stat-l{font-size:11px;color:rgba(255,255,255,.35);margin-top:2px;display:block}
+/* ── Main layout ── */
+.main{max-width:1040px;margin:0 auto;padding:2rem;display:grid;grid-template-columns:1fr 260px;gap:2rem;align-items:start}
+@media(max-width:720px){.main{grid-template-columns:1fr}}
+/* ── Section header ── */
+.section-hdr{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem}
+.section-hdr h2{font-family:'Poppins',sans-serif;font-size:18px;font-weight:700;color:var(--z-deep-navy)}
+.section-hdr-line{flex:1;height:1px;background:var(--z-light-gray)}
+/* ── Cards ── */
+.card{background:#fff;border:1px solid var(--z-light-gray);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:.875rem;border-top:3px solid var(--z-primary-blue);animation:fadeUp .35s ease both;transition:box-shadow .15s}
+.card:hover{box-shadow:0 4px 20px rgba(23,36,95,.08)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:3px}
+.card-num{font-family:'Poppins',sans-serif;font-size:22px;font-weight:800;color:var(--z-light-gray)}
+.card-headline{font-family:'Poppins',sans-serif;font-size:15px;font-weight:700;color:var(--z-deep-navy);line-height:1.35;margin-bottom:8px}
+.card-detail{font-size:13px;color:#555;line-height:1.7;margin-bottom:12px}
+.card-source{display:flex;align-items:center;gap:7px;padding-top:10px;border-top:1px solid var(--z-light-gray)}
+.source-link{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;color:var(--z-primary-blue);text-decoration:none}
+.source-link:hover{color:var(--z-sky-blue);text-decoration:underline}
+.empty-state{background:#fff;border:1px solid var(--z-light-gray);border-radius:8px;padding:2.5rem;text-align:center;color:#888;font-size:14px}
+/* ── Sidebar ── */
+.sidebar-card{background:#fff;border:1px solid var(--z-light-gray);border-radius:8px;padding:1.25rem;margin-bottom:1rem}
+.sidebar-card h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;color:var(--z-deep-navy);margin-bottom:.875rem;padding-bottom:8px;border-bottom:1px solid var(--z-light-gray)}
+.hist-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--z-light-gray);font-size:12px;font-family:'Open Sans',sans-serif}
 .hist-row:last-child{border-bottom:none}
-.hist-date{font-family:'DM Mono',monospace;color:#555}
-.hist-n{font-family:'DM Mono',monospace;color:#aaa}
-.legend-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px;color:#555}
-footer{background:#0B1F3A;padding:1rem 2rem;margin-top:3rem}
-.ftr{max-width:960px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
-.ftr-l{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,.2)}
-.ftr-r{font-size:10px;color:rgba(255,255,255,.2)}
-.ftr-r span{color:#E8A020}
+.hist-n{color:#aaa}
+.legend-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px}
+.muted{font-size:13px;color:#aaa;padding:4px 0}
+/* ── Footer ── */
+footer{background:var(--z-deep-navy);padding:1.25rem 2rem;margin-top:3rem}
+.ftr{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.ftr-l{font-size:11px;color:rgba(255,255,255,.25);font-family:'Open Sans',sans-serif}
+.ftr-r{font-size:11px;color:rgba(255,255,255,.25);font-family:'Open Sans',sans-serif}
+.ftr-r span{color:var(--z-sky-blue)}
 </style>
 </head>
 <body>
-<header>
+
+<div class="accent-bar"></div>
+<header class="site-header">
   <div class="hdr">
-    <div><span class="badge">ISO 20022</span><span class="hdr-name">EPC Weekly Intelligence</span></div>
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 18 18" fill="none">
+          <path d="M2 14L9 4l7 10H2z" fill="#fff" opacity=".9"/>
+        </svg>
+      </div>
+      <span class="logo-name">Zalaris <span>·</span> ISO 20022 Monitor</span>
+    </div>
     <span class="hdr-date">Monday, 13 April 2026</span>
   </div>
 </header>
+
 <section class="hero">
   <div class="hero-inner">
-    <p class="eyebrow">European Payments Council · Weekly Monitor</p>
-    <h1>ISO 20022<br><em>Weekly Briefing</em></h1>
+    <p class="hero-eyebrow">European Payments Council · Weekly Intelligence</p>
+    <h1>ISO 20022<br><span>Weekly Briefing</span></h1>
     <p class="week-label">Week of 6 April 2026</p>
-    <div class="summary-box">EPC launched a public consultation on VOP Rulebook 2.0 change requests (1 April – 30 June 2026), marking the first major evolution of the fraud-prevention scheme since its October 2025 launch.</div>
+    <div class="summary-box">EPC launches VOP Rulebook 2.0 public consultation running April-June 2026, while ECB publishes comprehensive payments strategy addressing digital euro, DLT settlement, and ISO 20022 infrastructure.</div>
     <div class="stats">
       <div><span class="stat-n">5</span><span class="stat-l">developments</span></div>
-      <div><span class="stat-n">7</span><span class="stat-l">weeks tracked</span></div>
+      <div><span class="stat-n">8</span><span class="stat-l">weeks tracked</span></div>
+      <div><span class="stat-n">13 Apr</span><span class="stat-l">last updated</span></div>
     </div>
   </div>
 </section>
+
 <div class="main">
   <div>
-    <div class="section-title">Key developments this week</div>
+    <div class="section-hdr">
+      <h2>Key developments this week</h2>
+      <div class="section-hdr-line"></div>
+    </div>
     
-        <div class="bullet-card" style="animation-delay:0.00s">
-          <div class="bullet-top">
-            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
-              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
-            </div>
-            <span class="bullet-num" style="color:#C0392B">#1</span>
+      <div class="card" style="animation-delay:0.00s">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
+            <span class="pill" style="background:#FFF8E7;color:#B07800">Consultation</span>
           </div>
-          <div class="bullet-headline">EPC Opens VOP Rulebook 2.0 Consultation Through June</div>
-          <div class="bullet-detail">The EPC initiated a 90-day public consultation on change requests for the Verification of Payee scheme rulebook version 2.0, running from 1 April to 30 June 2026, with the new rulebook expected by November 2026.</div>
-          
-          <div class="bullet-source">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
-              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <a href="https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
-          </div>
+          <span class="card-num">#1</span>
         </div>
-        <div class="bullet-card" style="animation-delay:0.08s">
-          <div class="bullet-top">
-            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
-              <span class="pill" style="background:#FEF5E7;color:#8B5E14">Consultation</span>
-            </div>
-            <span class="bullet-num" style="color:#C0392B">#2</span>
-          </div>
-          <div class="bullet-headline">EPC Consults on SCT Inst at Point of Interaction</div>
-          <div class="bullet-detail">The EPC launched a consultation running 6 March to 10 April 2026 exploring its potential role in facilitating interoperability of SCT Inst-based payment solutions at the Point of Interaction (POI).</div>
-          
-          <div class="bullet-source">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
-              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <a href="https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-use-sct-inst-poi" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
-          </div>
+        <div class="card-headline">EPC Opens VOP Rulebook 2.0 Consultation</div>
+        <div class="card-detail">The EPC initiated a public consultation on change requests for the Verification of Payee scheme rulebook version 2.0 running from 1 April to 30 June 2026, with version 2.0 expected by November 2026.</div>
+        <div class="card-source">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"
+              stroke="#18B2E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="https://www.europeanpaymentscouncil.eu/what-we-do/other-schemes/verification-payee" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
         </div>
-        <div class="bullet-card" style="animation-delay:0.16s">
-          <div class="bullet-top">
-            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span>
-              <span class="pill" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
-            </div>
-            <span class="bullet-num" style="color:#2D7A4F">#3</span>
+      </div>
+      <div class="card" style="animation-delay:0.08s">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
+            <span class="pill" style="background:#F0F2F5;color:#555E6E">Regulation</span>
           </div>
-          <div class="bullet-headline">EPC Releases 2026 Cryptography Guidelines with PQC Focus</div>
-          <div class="bullet-detail">The EPC published version 16 of its Guidelines on cryptographic algorithms usage and key management on 17 March 2026, with significant updates on Post-Quantum Cryptography considerations for payment service providers.</div>
-          
-          <div class="bullet-source">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
-              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <a href="https://www.europeanpaymentscouncil.eu/document-library/guidance-documents/yearly-update-guidelines-cryptographic-algorithms-usage-and-0" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
-          </div>
+          <span class="card-num">#2</span>
         </div>
-        <div class="bullet-card" style="animation-delay:0.24s">
-          <div class="bullet-top">
-            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
-              <span class="pill" style="background:#EBF4FB;color:#1B6CA8">Migration</span>
-            </div>
-            <span class="bullet-num" style="color:#C0392B">#4</span>
-          </div>
-          <div class="bullet-headline">Bank of England Finalizing November 2026 CHAPS ISO Changes</div>
-          <div class="bullet-detail">The Bank of England published detailed change request documentation for the November 2026 CHAPS/RTGS ISO 20022 release, with final schemas expected in April 2026; unstructured addresses will be rejected from November 2026.</div>
-          
-          <div class="bullet-source">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
-              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <a href="https://www.bankofengland.co.uk/payment-and-settlement/rtgs-renewal-programme/iso-20022" target="_blank" rel="noopener" class="source-link">Bank of England &rarr;</a>
-          </div>
+        <div class="card-headline">ECB Publishes Comprehensive Eurosystem Payments Strategy</div>
+        <div class="card-detail">The Eurosystem published a comprehensive payments strategy on 31 March 2026 covering wholesale, B2B, retail, and cross-border payments, with focus on digital euro readiness by 2029 and DLT-based settlement through Pontes and Appia initiatives.</div>
+        <div class="card-source">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"
+              stroke="#18B2E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260331~04561d8476.en.html" target="_blank" rel="noopener" class="source-link">ECB &rarr;</a>
         </div>
-        <div class="bullet-card" style="animation-delay:0.32s">
-          <div class="bullet-top">
-            <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-              <span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span>
-              <span class="pill" style="background:#EBF4FB;color:#1B6CA8">Migration</span>
-            </div>
-            <span class="bullet-num" style="color:#2D7A4F">#5</span>
+      </div>
+      <div class="card" style="animation-delay:0.16s">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="pill" style="background:#E8F4FD;color:#004F9E">Medium</span>
+            <span class="pill" style="background:#FFF8E7;color:#B07800">Consultation</span>
           </div>
-          <div class="bullet-headline">ECB T2 ISO 20022 Unfreeze Step 1 Set for June 2026</div>
-          <div class="bullet-detail">The ECB is progressing with its ISO 20022 message unfreeze strategy, implementing the initial step with ISO Maintenance Release 2024 in June 2026, with annual real-time maintenance to begin from November 2026.</div>
-          
-          <div class="bullet-source">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
-              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <a href="https://www.ecb.europa.eu/paym/groups/shared/docs/8f742-2025-06-26-t2-cg-item-5.2-a-iso-20022-message-unfreeze-strategy-status-update.pdf" target="_blank" rel="noopener" class="source-link">ECB &rarr;</a>
-          </div>
+          <span class="card-num">#3</span>
         </div>
-    <p style="font-size:11px;color:#aaa;margin-top:8px;font-style:italic">Key developments center on EPC scheme consultations (VOP 2.0, SCT Inst at POI) and November 2026 deadline preparations. The structured address deadline (15 November 2026 per EPC alignment with Swift) and camt.110/111 E&I message reception mandate remain critical milestones. Sources include EPC official news, Bank of England RTGS documentation, and ECB T2 Contact Group materials.</p>
+        <div class="card-headline">EPC Consults on SCT Inst at Point of Interaction</div>
+        <div class="card-detail">The EPC is running a public consultation from 6 March to 10 April 2026 exploring its role in interoperability of payment solutions based on SCT Inst at the Point of Interaction.</div>
+        <div class="card-source">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"
+              stroke="#18B2E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="https://www.europeanpaymentscouncil.eu/news-insights/news/public-consultation-use-sct-inst-poi" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+        </div>
+      </div>
+      <div class="card" style="animation-delay:0.24s">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="pill" style="background:#FDECEA;color:#C0392B">High</span>
+            <span class="pill" style="background:#E8F4FD;color:#004F9E">Migration</span>
+          </div>
+          <span class="card-num">#4</span>
+        </div>
+        <div class="card-headline">November 2026 Deadline for Structured Address Format</div>
+        <div class="card-detail">As of 15 November 2026, unstructured postal addresses can no longer be provided in EPC payment messages across all SEPA schemes, aligned with the SWIFT Standards MX Release date.</div>
+        <div class="card-source">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"
+              stroke="#18B2E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-1" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+        </div>
+      </div>
+      <div class="card" style="animation-delay:0.32s">
+        <div class="card-top">
+          <div class="card-tags">
+            <span class="pill" style="background:#FFF8E7;color:#EEA900">Watch</span>
+            <span class="pill" style="background:#F0EBF8;color:#5A3E8A">Technical</span>
+          </div>
+          <span class="card-num">#5</span>
+        </div>
+        <div class="card-headline">EPC Publishes Stablecoins Insight Article</div>
+        <div class="card-detail">The EPC published an insight article on 26 March 2026 examining stablecoins as they move from crypto margins to mainstream global finance, highlighting Europe's pivotal regulatory moment under MiCA.</div>
+        <div class="card-source">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7"
+              stroke="#18B2E8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="https://www.europeanpaymentscouncil.eu/news-insights/news" target="_blank" rel="noopener" class="source-link">EPC &rarr;</a>
+        </div>
+      </div>
+    <p style="font-size:11px;color:#aaa;margin-top:8px;font-style:italic">Sources consulted: EPC website (news section, scheme pages, implementation guidelines), ECB press releases and payments strategy publications, regulatory tracking sources including Regulation Tomorrow and Electronic Payments International. All URLs verified against search results.</p>
   </div>
+
   <aside>
     <div class="sidebar-card">
-      <div class="sidebar-title">Priority legend</div>
+      <h3>Priority legend</h3>
       <div class="legend-row"><span class="pill" style="background:#FDECEA;color:#C0392B">High</span> Act now / imminent</div>
-      <div class="legend-row"><span class="pill" style="background:#EBF7F0;color:#2D7A4F">Medium</span> New publication</div>
-      <div class="legend-row"><span class="pill" style="background:#FEF5E7;color:#8B5E14">Watch</span> Upcoming item</div>
+      <div class="legend-row"><span class="pill" style="background:#E8F4FD;color:#004F9E">Medium</span> New publication</div>
+      <div class="legend-row"><span class="pill" style="background:#FFF8E7;color:#EEA900">Watch</span> Upcoming item</div>
     </div>
     <div class="sidebar-card">
-      <div class="sidebar-title">Run history</div>
-      
-        <div class="hist-row">
-          <span class="hist-date">13 Apr 2026</span>
-          <span class="hist-n">5 items</span>
-        </div>
-        <div class="hist-row">
-          <span class="hist-date">13 Apr 2026</span>
-          <span class="hist-n">5 items</span>
-        </div>
-        <div class="hist-row">
-          <span class="hist-date">13 Apr 2026</span>
-          <span class="hist-n">5 items</span>
-        </div>
-        <div class="hist-row">
-          <span class="hist-date">13 Apr 2026</span>
-          <span class="hist-n">5 items</span>
-        </div>
-        <div class="hist-row">
-          <span class="hist-date">13 Apr 2026</span>
-          <span class="hist-n">5 items</span>
-        </div>
-        <div class="hist-row">
-          <span class="hist-date">11 Apr 2026 07:46</span>
-          <span class="hist-n">6 items</span>
-        </div>
+      <h3>Run history</h3>
+      <div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div><div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div><div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div><div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div><div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div><div class="hist-row"><span>13 Apr 2026</span><span class="hist-n">5 items</span></div>
     </div>
     <div class="sidebar-card">
-      <div class="sidebar-title">About</div>
-      <p style="font-size:12px;color:#666;line-height:1.6">Claude AI agent with live web search. Monitors ISO 20022 developments across EPC, SWIFT, ECB and national central banks. Runs every Monday at 10:00 CET.</p>
+      <h3>About</h3>
+      <p style="font-size:12px;color:#666;line-height:1.65">Claude AI agent with live web search. Monitors ISO 20022 developments across EPC, SWIFT, ECB and national central banks. Runs every Monday at 10:00 CET.</p>
     </div>
   </aside>
 </div>
+
 <footer>
   <div class="ftr">
-    <span class="ftr-l">ISO 20022 Weekly Intelligence · EPC Monitor</span>
+    <span class="ftr-l">Zalaris · ISO 20022 Weekly Intelligence · EPC Monitor</span>
     <span class="ftr-r">Powered by <span>Claude AI</span></span>
   </div>
 </footer>
