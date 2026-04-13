@@ -3,6 +3,10 @@
 EPC ISO 20022 Weekly Briefing Agent
 Runs every Monday at 09:00 UTC via GitHub Actions.
 Writes docs/index.html served by GitHub Pages.
+
+Two-pass approach:
+  Pass 1 - find key developments
+  Pass 2 - find the exact URL for each development
 """
 
 import os
@@ -23,10 +27,15 @@ def run_agent(topic: str) -> dict:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
     system = f"""You are a financial regulation intelligence agent monitoring ISO 20022
-payment standard developments globally, with focus on the European Payments Council (EPC).
+payment standard developments, with focus on the European Payments Council (EPC).
 
-Search europeanpaymentscouncil.eu and authoritative financial/regulatory sources for
-the most important developments this week related to: "{topic}".
+Your task has TWO passes:
+
+PASS 1 — Search for the 3-5 most important ISO 20022 / EPC developments from the past 14 days.
+
+PASS 2 — For EACH development found in Pass 1, perform a SEPARATE web search to find the
+exact URL of the article, press release, or publication page. Search for the title + site name.
+Use the most specific URL you can find — not a homepage.
 
 Return ONLY a JSON object — no markdown, no preamble:
 {{
@@ -38,31 +47,36 @@ Return ONLY a JSON object — no markdown, no preamble:
       "headline": "Short punchy headline, max 10 words",
       "detail": "One sentence explaining what happened and why it matters.",
       "tag": "one of: Rulebook | Consultation | Regulation | Technical | Migration | Event",
-      "importance": "one of: High | Medium | Watch"
+      "importance": "one of: High | Medium | Watch",
+      "source_label": "Readable source name e.g. EPC, SWIFT, ECB, BIS, Reuters",
+      "source_url": "REQUIRED — full https:// URL found in Pass 2. Never use a homepage. Use the deepest page URL available."
     }}
   ],
   "nothing_new": false,
-  "agent_note": "brief note on sources used"
+  "agent_note": "note on sources"
 }}
 
-Rules:
-- Find 3-5 bullets maximum. Quality over quantity.
-- If there is genuinely nothing new this week, set nothing_new to true and bullets to [].
-- Each bullet must be a DISTINCT development — no repetition.
-- importance=High: imminent deadline or major regulatory change
-- importance=Medium: published update or consultation opened
-- importance=Watch: upcoming item to monitor
-- Prioritise content from the last 7-14 days. If nothing very recent, note the most relevant recent items.
-"""
+IMPORTANT: Every bullet MUST have a source_url. If you cannot find the exact article,
+use the most relevant section page such as:
+- https://www.europeanpaymentscouncil.eu/news-insights/news
+- https://www.swift.com/news-events/news
+- https://www.ecb.europa.eu/press/pr/html/index.en.html
+Never leave source_url as an empty string."""
 
     response = client.messages.create(
         model="claude-opus-4-5",
-        max_tokens=1500,
+        max_tokens=2000,
         system=system,
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
         messages=[{
             "role": "user",
-            "content": f"Search for ISO 20022 and EPC news and developments from the past 7-14 days. Return JSON only."
+            "content": (
+                "Pass 1: Search for the most important ISO 20022 and EPC developments "
+                "from the past 14 days. "
+                "Pass 2: For each development, search again to find its exact article URL. "
+                "Include a real https:// URL for every single bullet. "
+                "Return JSON only."
+            )
         }],
     )
 
@@ -71,7 +85,28 @@ Rules:
     s, e = clean.find("{"), clean.rfind("}")
     if s == -1 or e == -1:
         raise ValueError(f"No JSON in response: {raw[:300]}")
-    return json.loads(clean[s:e+1])
+
+    result = json.loads(clean[s:e+1])
+
+    # Fallback: if any bullet still has empty source_url, assign a sensible default
+    fallbacks = {
+        "epc":        "https://www.europeanpaymentscouncil.eu/news-insights/news",
+        "swift":      "https://www.swift.com/news-events/news",
+        "ecb":        "https://www.ecb.europa.eu/press/pr/html/index.en.html",
+        "bis":        "https://www.bis.org/list/speeches/index.htm",
+    }
+    default_url = "https://www.europeanpaymentscouncil.eu/news-insights/news"
+
+    for b in result.get("bullets", []):
+        url = (b.get("source_url") or "").strip()
+        if not url or url == "":
+            label = (b.get("source_label") or "").lower()
+            b["source_url"] = next(
+                (v for k, v in fallbacks.items() if k in label),
+                default_url
+            )
+
+    return result
 
 
 def importance_style(imp: str):
@@ -102,7 +137,6 @@ def render_html(result: dict, history: list) -> str:
     nothing  = result.get("nothing_new", False)
     runs     = len(history)
 
-    # Build bullet cards
     bullet_html = ""
     if nothing or not bullets:
         bullet_html = """
@@ -112,8 +146,19 @@ def render_html(result: dict, history: list) -> str:
     else:
         for i, b in enumerate(bullets):
             imp_style, imp_label, imp_color = importance_style(b.get("importance", "Medium"))
-            t_style = tag_style(b.get("tag", ""))
-            delay = i * 0.08
+            t_style    = tag_style(b.get("tag", ""))
+            delay      = i * 0.08
+            source_url = (b.get("source_url") or "").strip()
+            source_lbl = (b.get("source_label") or "Read more").strip()
+
+            source_block = f"""
+          <div class="bullet-source">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="flex-shrink:0;margin-top:1px">
+              <path d="M5 2H2a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1V7M8 1h3m0 0v3m0-3L5 7" stroke="#1B6CA8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <a href="{source_url}" target="_blank" rel="noopener" class="source-link">{source_lbl} &rarr;</a>
+          </div>"""
+
             bullet_html += f"""
         <div class="bullet-card" style="animation-delay:{delay:.2f}s">
           <div class="bullet-top">
@@ -125,9 +170,9 @@ def render_html(result: dict, history: list) -> str:
           </div>
           <div class="bullet-headline">{b.get('headline','')}</div>
           <div class="bullet-detail">{b.get('detail','')}</div>
+          {source_block}
         </div>"""
 
-    # History sidebar
     hist_html = ""
     for h in history[:6]:
         hist_html += f"""
@@ -173,7 +218,10 @@ h1 em{{color:#F5C05A;font-style:italic}}
 .pill{{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px;border-radius:2px}}
 .bullet-num{{font-family:'DM Serif Display',serif;font-size:20px;opacity:.3}}
 .bullet-headline{{font-family:'DM Serif Display',serif;font-size:16px;color:#0B1F3A;line-height:1.3;margin-bottom:6px}}
-.bullet-detail{{font-size:13px;color:#555;line-height:1.6}}
+.bullet-detail{{font-size:13px;color:#555;line-height:1.6;margin-bottom:10px}}
+.bullet-source{{display:flex;align-items:flex-start;gap:6px;padding-top:10px;border-top:1px solid rgba(11,31,58,.07)}}
+.source-link{{font-size:12px;color:#1B6CA8;text-decoration:none;font-weight:500}}
+.source-link:hover{{text-decoration:underline}}
 .sidebar-card{{background:#fff;border:1px solid rgba(11,31,58,.1);border-radius:6px;padding:1.25rem;margin-bottom:1rem}}
 .sidebar-title{{font-family:'DM Serif Display',serif;font-size:14px;color:#0B1F3A;margin-bottom:.75rem;padding-bottom:8px;border-bottom:1px solid rgba(11,31,58,.08)}}
 .hist-row{{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(11,31,58,.06);font-size:12px}}
@@ -256,7 +304,7 @@ def save_history(history: list, result: dict) -> list:
         "bullets": result.get("bullets", []),
     }
     history.insert(0, entry)
-    history = history[:52]  # keep one year
+    history = history[:52]
     HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
     HISTORY_FILE.write_text(json.dumps(history, indent=2))
     return history
